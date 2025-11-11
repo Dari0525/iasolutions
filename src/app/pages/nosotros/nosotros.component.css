@@ -1,0 +1,308 @@
+/* ============================================
+   NOSOTROS PAGE
+   ===================================.mission-vision-card h3 {
+  color: var(--color-white);
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.mission-vision-card p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* ===== PAGE HEADER con imagen ===== */
+.page-header {
+  position: relative;
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.92) 0%, rgba(44, 95, 124, 0.88) 100%),
+              url('https://images.unsplash.com/photo-1521791055366-0d553872125f?w=1600&q=80') center/cover;
+  z-index: 0;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: var(--spacing-md) auto 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content-wrapper h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.content-wrapper p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-md);
+  text-align: justify;
+}
+
+.content-wrapper p strong {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ===== MISIÓN Y VISIÓN (Sección Oscura) ===== */
+.mission-vision-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.mission-vision-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(196, 147, 63, 0.3);
+}
+
+.mv-icon {
+  font-size: 4rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.mission-vision-card h3 {
+  color: var(--color-primary);
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.mission-vision-card p {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-gray-dark);
+  margin: 0;
+}
+
+/* ===== WHY US SECTION ===== */
+.why-us-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.section-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+  font-size: 2rem;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-description {
+  font-size: 1.0625rem;
+  color: var(--color-gray-medium);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.benefits-list {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.benefit-item {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.benefit-item:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-content h4 {
+  color: var(--color-gray-dark);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.benefit-content p {
+  color: var(--color-gray-medium);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== CTA SECTION con imagen ===== */
+.cta-section {
+  position: relative;
+  padding: var(--spacing-2xl) 0;
+  overflow: hidden;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+}
+
+.cta-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(44, 95, 124, 0.92) 0%, rgba(26, 61, 82, 0.90) 100%),
+              url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1600&q=80') center/cover;
+  z-index: 0;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.cta-buttons .btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.cta-buttons .btn-primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-3px);
+}
+
+.cta-buttons .btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 2px solid white;
+}
+
+.cta-buttons .btn-secondary:hover {
+  background: white;
+  color: var(--color-secondary);
+  transform: translateY(-3px);
+}
+
+.cta-buttons .btn-secondary:hover {
+  background: white;
+  color: var(--color-secondary);
+}
+
+/* ===== RESPONSIVE - TABLET ===== */
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 3rem;
+  }
+
+  .cta-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .benefit-number {
+    width: 70px;
+    height: 70px;
+    font-size: 1.75rem;
+  }
+}
+
+/* ===== RESPONSIVE - DESKTOP ===== */
+@media (min-width: 1024px) {
+  .page-header {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .benefit-item {
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl);
+  }
+}

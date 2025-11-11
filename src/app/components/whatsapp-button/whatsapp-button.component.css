@@ -1,0 +1,73 @@
+/* ============================================
+   WHATSAPP FLOATING BUTTON
+   ============================================ */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  padding: 0.875rem 1.25rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  z-index: 999;
+  transition: all var(--transition-normal);
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.whatsapp-text {
+  display: none;
+}
+
+/* ===== ANIMACIÓN PULSE ===== */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6);
+  }
+}
+
+/* ===== RESPONSIVE - TABLET ===== */
+@media (min-width: 768px) {
+  .whatsapp-button {
+    right: 2rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .whatsapp-text {
+    display: inline;
+  }
+
+  .whatsapp-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* ===== RESPONSIVE - DESKTOP ===== */
+@media (min-width: 1024px) {
+  .whatsapp-button {
+    bottom: 2.5rem;
+    right: 2.5rem;
+  }
+}

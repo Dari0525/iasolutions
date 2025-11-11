@@ -1,0 +1,350 @@
+<div class="productos-page">
+  <!-- HEADER con imagen -->
+  <section class="page-header">
+    <div class="header-background"></div>
+    <div class="container">
+      <h1 class="page-title">Nuestros Productos</h1>
+      <div class="decorative-line"></div>
+      <p class="page-subtitle">
+        Amplio portafolio de seguros adaptados a tus necesidades
+      </p>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section class="section products-section">
+    <div class="container">
+      
+      <!-- SEGUROS DE VIDA -->
+      <div class="product-item" [class.expanded]="isExpanded('vida')">
+        <div class="product-header" (click)="toggleProduct('vida')">
+          <div class="product-icon">👨‍👩‍👧‍👦</div>
+          <div class="product-title-wrapper">
+            <h3>Seguros de Vida</h3>
+            <p class="product-preview">Protección para caso de fallecimiento o sobrevivencia</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('vida')">
+            <span>{{ isExpanded('vida') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('vida')">
+          <p class="intro">Este tipo de productos cubren la vida propia o de un tercero, tanto para caso de fallecimiento como para caso de vida (sobrevivencia), o ambas conjuntamente.</p>
+          
+          <div class="product-subsection">
+            <h4>🔹 Vida Grupo</h4>
+            <p>Seguro de vida que ampara el patrimonio familiar de un conjunto de personas agrupadas por una persona natural o jurídica, que contrata el seguro y adquiere la obligación de pagar la prima.</p>
+            
+            <h5>Coberturas básicas y adicionales:</h5>
+            <ul>
+              <li><strong>Amparo básico:</strong> Muerte por cualquier causa, inclusive el suicidio, desde el primer día de vigencia</li>
+              <li><strong>Incapacidad total y permanente:</strong> Cobertura en caso de incapacidad a consecuencia de enfermedad o accidente</li>
+              <li><strong>Muerte o desmembración accidental:</strong> Valor adicional por muerte accidental o desmembración</li>
+              <li><strong>Muerte intencional:</strong> Valor adicional si la muerte ocurre por homicidio</li>
+              <li><strong>Renta diaria por hospitalización:</strong> Valor diario mientras esté hospitalizado</li>
+              <li><strong>Gastos médicos por accidente:</strong> Cubre gastos médicos derivados de accidentes</li>
+              <li><strong>Auxilio funerario:</strong> Valor adicional para beneficiarios en caso de fallecimiento</li>
+            </ul>
+
+            <p class="highlight-text">Productos disponibles: Vida grupo deudores, Beneficio por incapacidad, Vida grupo convenio uso, Vida grupo integral, Vida grupo elección popular</p>
+          </div>
+
+          <div class="product-subsection">
+            <h4>🔹 Vida Individual</h4>
+            <p>Planes flexibles de vida personal para diferentes niveles socioeconómicos que busquen proteger sus ingresos con un capital de respaldo que les permita en caso de fallecimiento, accidente, enfermedad o sobrevivencia, conservar la independencia económica y mantener su calidad de vida.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ARL -->
+      <div class="product-item" [class.expanded]="isExpanded('arl')">
+        <div class="product-header" (click)="toggleProduct('arl')">
+          <div class="product-icon">💼</div>
+          <div class="product-title-wrapper">
+            <h3>ARL - Aseguradora de Riesgos Laborales</h3>
+            <p class="product-preview">Protección para empleados contra accidentes y enfermedades laborales</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('arl')">
+            <span>{{ isExpanded('arl') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('arl')">
+          <p>Prevenga y proteja a sus empleados de accidentes y enfermedades laborales con los seguros ARL.</p>
+          
+          <h5>Para Empleadores (empresas):</h5>
+          <p>Construimos en acuerdo con Usted las soluciones más efectivas y eficientes para la Gestión en Seguridad y Salud en el Trabajo, con el fin de mejorar la productividad, cumplir la normatividad vigente, e implementar procesos de mejora continua con responsabilidad social.</p>
+          
+          <h5>Para los trabajadores:</h5>
+          <p>Brindamos aseguramiento ante la ocurrencia de Accidentes de Trabajo y Enfermedades Laborales, además de ofrecer asesoría para la Promoción de la Salud, Prevención de Riesgos en el Trabajo, fomento de estilos de vida y trabajo saludable y autocuidado.</p>
+          
+          <p class="note">La tarifa corresponderá a la clasificación de riesgo de la actividad económica que desempeña la empresa, según la clase de riesgo establecida por el Gobierno Nacional.</p>
+        </div>
+      </div>
+
+      <!-- PRODUCTOS EXEQUIALES -->
+      <div class="product-item" [class.expanded]="isExpanded('exequial')">
+        <div class="product-header" (click)="toggleProduct('exequial')">
+          <div class="product-icon">🕊️</div>
+          <div class="product-title-wrapper">
+            <h3>Productos Exequiales</h3>
+            <p class="product-preview">Soporte económico para gastos funerarios</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('exequial')">
+            <span>{{ isExpanded('exequial') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('exequial')">
+          <p>Con este tipo de seguro, usted o sus colaboradores, asociados o afiliados, podrán contar con un soporte económico para suplir los gastos funerarios, recibiendo un apoyo en los momentos más difíciles.</p>
+          
+          <h5>Beneficios:</h5>
+          <ul>
+            <li>Puede elegir el plan que más se ajuste a sus necesidades</li>
+            <li>Puede incluir asistencia exequial para su mascota</li>
+            <li>Beneficio económico al no hacer uso de la cobertura</li>
+            <li>Posibilidad de cobertura inmediata desde el primer día al trasladarse</li>
+            <li>Cubre gastos de cremación y repatriación de cenizas</li>
+            <li>Asesoría especializada en trámites del servicio exequial</li>
+            <li>Indemnización económica adicional para beneficiarios</li>
+          </ul>
+          
+          <h5>Coberturas:</h5>
+          <ul>
+            <li>Traslado del fallecido al lugar de residencia</li>
+            <li>Auxilio para alistamiento de lote en propiedad</li>
+            <li>Auxilio para gastos por destino final</li>
+            <li>Auxilio por fallecimiento del asegurado principal</li>
+            <li>Protección garantizada con destinación específica</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ACCIDENTES PERSONALES -->
+      <div class="product-item" [class.expanded]="isExpanded('accidentes')">
+        <div class="product-header" (click)="toggleProduct('accidentes')">
+          <div class="product-icon">🚑</div>
+          <div class="product-title-wrapper">
+            <h3>Accidentes Personales</h3>
+            <p class="product-preview">Protección ante sucesos imprevistos y accidentes</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('accidentes')">
+            <span>{{ isExpanded('accidentes') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('accidentes')">
+          <p>Seguro que ofrece protección ante cualquier accidente, entendido como el suceso imprevisto, repentino, violento, externo, ajeno a la voluntad, que produzca la muerte o lesiones corporales al asegurado.</p>
+          
+          <p>Por un bajo costo, ayuda a compensar las grandes cargas económicas que pueden afectar a la familia como consecuencia de un accidente.</p>
+          
+          <h5>Productos disponibles:</h5>
+          <ul>
+            <li>Accidentes personales colectivos</li>
+            <li>Accidente estudiantil</li>
+            <li>Seguros para viajeros</li>
+            <li>Seguros para biciusuarios</li>
+          </ul>
+          
+          <h5>Coberturas:</h5>
+          <ul>
+            <li><strong>Amparo básico:</strong> Muerte accidental</li>
+            <li><strong>Invalidez Accidental y/o Desmembración:</strong> Protección en caso de invalidez o pérdidas anatómicas</li>
+            <li><strong>Gastos Médicos por accidente:</strong> Cubre atención médica, cirugías, hospitalización</li>
+            <li><strong>Renta Diaria por Hospitalización:</strong> Valor diario mientras esté hospitalizado</li>
+            <li><strong>Gastos de traslado:</strong> Cubre traslado a entidad de salud</li>
+            <li><strong>Auxilio Funerario:</strong> Valor adicional para beneficiarios</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- SEGUROS DE CUMPLIMIENTO -->
+      <div class="product-item" [class.expanded]="isExpanded('cumplimiento')">
+        <div class="product-header" (click)="toggleProduct('cumplimiento')">
+          <div class="product-icon">📋</div>
+          <div class="product-title-wrapper">
+            <h3>Seguros de Cumplimiento</h3>
+            <p class="product-preview">Garantía única para contratos estatales y privados</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('cumplimiento')">
+            <span>{{ isExpanded('cumplimiento') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('cumplimiento')">
+          <p>Seguros que amparan los perjuicios ocasionados por el incumplimiento (parcial o total) de un contrato. También conocida como garantía única para los contratos estatales.</p>
+          
+          <h5>Coberturas:</h5>
+          <ul>
+            <li>Buen manejo del anticipo</li>
+            <li>Pago de salarios y prestaciones sociales</li>
+            <li>Estabilidad y calidad del suministro, servicio u obra</li>
+            <li>Cumplimiento de obligaciones contractuales</li>
+          </ul>
+          
+          <p>Representa un aval que garantiza que los acuerdos establecidos a través de un contrato se cumplan en toda su extensión, protegiendo los perjuicios patrimoniales del contratante.</p>
+        </div>
+      </div>
+
+      <!-- RESPONSABILIDAD CIVIL -->
+      <div class="product-item" [class.expanded]="isExpanded('responsabilidad')">
+        <div class="product-header" (click)="toggleProduct('responsabilidad')">
+          <div class="product-icon">⚖️</div>
+          <div class="product-title-wrapper">
+            <h3>Responsabilidad Civil</h3>
+            <p class="product-preview">Protección patrimonial por daños a terceros</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('responsabilidad')">
+            <span>{{ isExpanded('responsabilidad') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('responsabilidad')">
+          <p>Cubre las indemnizaciones por los perjuicios patrimoniales que cause el asegurado a bienes o personas durante la ejecución de un contrato.</p>
+          
+          <p>Indemniza las pérdidas económicas provenientes de lesiones corporales y/o daños materiales causados a terceras personas en el desarrollo de actividades profesionales, comerciales o contractuales.</p>
+        </div>
+      </div>
+
+      <!-- SEGUROS PARA AUTOMÓVILES -->
+      <div class="product-item" [class.expanded]="isExpanded('auto')">
+        <div class="product-header" (click)="toggleProduct('auto')">
+          <div class="product-icon">🚗</div>
+          <div class="product-title-wrapper">
+            <h3>Seguros para Automóviles</h3>
+            <p class="product-preview">SOAT y seguros todo riesgo para vehículos</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('auto')">
+            <span>{{ isExpanded('auto') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('auto')">
+          <div class="product-subsection">
+            <h4>🔹 SOAT</h4>
+            <p>Póliza OBLIGATORIA para todos los vehículos que transiten por el territorio colombiano. Ampara los daños corporales que se causen a las personas en accidentes de tránsito.</p>
+            
+            <p>Cubre víctimas de accidentes de tránsito (peatones, pasajeros o conductor) con servicios y prestaciones medidos en Salarios Mínimos Legales Diarios Vigentes (SMLDV).</p>
+          </div>
+
+          <div class="product-subsection">
+            <h4>🔹 Seguro Todo Riesgo</h4>
+            <p>Póliza que cubre el costo de los daños que puede sufrir el vehículo, al igual que los costos derivados por el hurto.</p>
+            
+            <h5>Coberturas:</h5>
+            <ul>
+              <li>Pérdida total por daños</li>
+              <li>Pérdida parcial por daños</li>
+              <li>Pérdida parcial por hurto</li>
+              <li>Protección Patrimonial para Responsabilidad Civil Extracontractual</li>
+              <li>Protección Patrimonial para daños</li>
+              <li>Amparo de Asistencia Jurídica</li>
+            </ul>
+            
+            <h5>Obligaciones del tomador:</h5>
+            <ul>
+              <li>Tener licencia de conducción vigente</li>
+              <li>No conducir bajo efectos de sustancias alucinógenas o alcohol</li>
+              <li>Mantener al día el pago de la póliza</li>
+              <li>No utilizar el vehículo para labores no autorizadas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SEGUROS DEL HOGAR -->
+      <div class="product-item" [class.expanded]="isExpanded('hogar')">
+        <div class="product-header" (click)="toggleProduct('hogar')">
+          <div class="product-icon">🏠</div>
+          <div class="product-title-wrapper">
+            <h3>Seguros del Hogar</h3>
+            <p class="product-preview">Protección para tu vivienda y bienes</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('hogar')">
+            <span>{{ isExpanded('hogar') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('hogar')">
+          <p>La mejor alternativa para proteger tu vivienda y los bienes que valoras. Ofrece cobertura frente a situaciones imprevistas.</p>
+          
+          <h5>Razones para tener este seguro:</h5>
+          <ol>
+            <li>Protege tu hogar, vivienda y bienes frente a daños o pérdidas materiales</li>
+            <li>Respaldo de compañías líderes en el mercado colombiano</li>
+            <li>Puedes asegurar tus bienes aunque la vivienda no sea propia</li>
+            <li>Cubre gastos de posible responsabilidad civil por lesiones o daños a terceros</li>
+            <li>Protege frente a desastres naturales, incendio o explosión</li>
+            <li>Planes convenientes según tus necesidades</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- SALUD -->
+      <div class="product-item" [class.expanded]="isExpanded('salud')">
+        <div class="product-header" (click)="toggleProduct('salud')">
+          <div class="product-icon">🏥</div>
+          <div class="product-title-wrapper">
+            <h3>Seguros de Salud</h3>
+            <p class="product-preview">Complemento al POS para imprevistos médicos</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('salud')">
+            <span>{{ isExpanded('salud') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('salud')">
+          <p>Seguros que amparan a los asegurados cuando se presentan imprevistos de salud. Pueden cubrir accidentes con necesidad de hospitalización, tratamiento quirúrgico o ambulatorio.</p>
+          
+          <p>Ofrecemos seguros colectivos para empresas, colegios, asociaciones, cooperativas, clubes deportivos, personal del estado y deudores de entidades financieras.</p>
+          
+          <h5>Características Generales:</h5>
+          <ul>
+            <li>Protección a un grupo de personas, extendiendo cobertura al núcleo familiar</li>
+            <li>Prima proporcionalmente más económica que contratos individuales</li>
+            <li>Solicitudes de asegurabilidad simplificadas</li>
+            <li>Variedad de coberturas según necesidades del grupo</li>
+            <li>Posibilidad de convertirse a seguro individual</li>
+          </ul>
+          
+          <h5>Productos disponibles:</h5>
+          <ul>
+            <li><strong>Gastos médicos por complicaciones quirúrgicas:</strong> Cubre complicaciones no cubiertas por POS</li>
+            <li><strong>Hospitalización y cirugía colectiva:</strong> Complementaria del Régimen Contributivo de Salud</li>
+            <li><strong>Salud plena:</strong> Respaldo económico en caso de diagnóstico de cáncer por primera vez</li>
+            <li><strong>Gastos clínicos ruptura/contractura prótesis:</strong> Cubre complicaciones grado III y IV</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- OTROS PRODUCTOS -->
+      <div class="product-item" [class.expanded]="isExpanded('otros')">
+        <div class="product-header" (click)="toggleProduct('otros')">
+          <div class="product-icon">✨</div>
+          <div class="product-title-wrapper">
+            <h3>Otros Productos</h3>
+            <p class="product-preview">Soluciones adicionales para necesidades específicas</p>
+          </div>
+          <button class="toggle-btn" [class.active]="isExpanded('otros')">
+            <span>{{ isExpanded('otros') ? '−' : '+' }}</span>
+          </button>
+        </div>
+        <div class="product-content" *ngIf="isExpanded('otros')">
+          <p>Teniendo en cuenta los conceptos de amenaza, peligro y riesgo, así como la eficiencia, confianza y satisfacción, complementamos la gestión de nuestros clientes con valores agregados que nos hacen únicos en el mercado.</p>
+          
+          <p class="highlight-text">¿Tienes alguna inquietud o riesgo por asegurar que no esté mencionado? No dudes en contactarnos.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content text-center">
+        <h2>¿Necesitas más información?</h2>
+        <p>Contáctanos y te asesoraremos sobre el seguro que mejor se adapte a tus necesidades</p>
+        <div class="cta-buttons">
+          <a href="https://wa.me/573213252193" target="_blank" class="btn btn-primary">
+            Cotizar por WhatsApp
+          </a>
+          <a routerLink="/contacto" class="btn btn-secondary">
+            Enviar consulta
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

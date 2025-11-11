@@ -1,0 +1,200 @@
+<div class="contacto-page">
+  <!-- HEADER con imagen -->
+  <section class="page-header">
+    <div class="header-background"></div>
+    <div class="container">
+      <h1 class="page-title">Contáctanos</h1>
+      <div class="decorative-line"></div>
+      <p class="page-subtitle">
+        Estamos listos para asesorarte y encontrar el seguro perfecto para ti
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACTO CONTENT -->
+  <section class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- INFORMACIÓN DE CONTACTO -->
+        <div class="contact-info">
+          <h2>Información de Contacto</h2>
+          <p class="contact-intro">
+            Comunícate con nosotros a través de cualquiera de nuestros canales. 
+            Estamos para servirte y resolver todas tus inquietudes.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-text">
+                <h4>Ubicación</h4>
+                <p>Carrera 7 #71-21 Torre B Piso 15<br>Bogotá, Colombia</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-text">
+                <h4>Teléfono</h4>
+                <p><a href="tel:+573213252193">+57 321 325 2193</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">💬</div>
+              <div class="contact-text">
+                <h4>WhatsApp</h4>
+                <p>
+                  <a href="https://wa.me/573213252193" target="_blank">
+                    Enviar mensaje
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">🕐</div>
+              <div class="contact-text">
+                <h4>Horarios de Atención</h4>
+                <p>
+                  <strong>Lunes a Viernes:</strong> 8:00 AM - 6:00 PM<br>
+                  <strong>Sábados:</strong> 9:00 AM - 1:00 PM
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA WHATSAPP -->
+          <div class="whatsapp-cta">
+            <h3>¿Prefieres chatear?</h3>
+            <p>Contáctanos directamente por WhatsApp para una atención más rápida</p>
+            <a href="https://wa.me/573213252193" target="_blank" class="btn-whatsapp">
+              <svg viewBox="0 0 32 32" class="wa-icon">
+                <path fill="currentColor" d="M16 0C7.163 0 0 7.163 0 16c0 2.825.733 5.48 2.018 7.788L.066 30.477l6.941-1.826A15.916 15.916 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm8.358 22.879c-.366.995-2.17 1.963-2.974 2.022-.805.058-1.56.386-5.226-1.089-4.392-1.763-7.223-6.181-7.444-6.466-.221-.284-1.794-2.388-1.794-4.557s1.131-3.235 1.533-3.677c.402-.441.879-.551 1.172-.551.293 0 .587.002.842.015.272.013.635-.103.994.756.366.88 1.254 3.048 1.365 3.267.11.22.184.476.037.759-.147.284-.22.461-.44.707-.22.245-.462.548-.66.735-.22.22-.449.457-.193.896.256.44 1.14 1.881 2.448 3.048 1.683 1.501 3.101 1.967 3.543 2.189.441.22.699.184.955-.11.256-.294 1.098-1.281 1.391-1.721.293-.441.587-.367 1.006-.22.418.147 2.654 1.251 3.11 1.478.454.228.758.338.867.524.11.184.11 1.089-.256 2.133z"/>
+              </svg>
+              Chatear por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="contact-form-wrapper">
+          <h2>Envíanos un Mensaje</h2>
+          <p class="form-intro">
+            Completa el formulario y nos pondremos en contacto contigo a la brevedad.
+          </p>
+
+          <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input 
+                type="text" 
+                id="nombre" 
+                name="nombre"
+                [(ngModel)]="formData.nombre"
+                required
+                placeholder="Tu nombre completo"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="email">Correo electrónico *</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email"
+                [(ngModel)]="formData.email"
+                required
+                placeholder="tucorreo@ejemplo.com"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Teléfono *</label>
+              <input 
+                type="tel" 
+                id="telefono" 
+                name="telefono"
+                [(ngModel)]="formData.telefono"
+                required
+                placeholder="321 234 5678"
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="tipoSeguro">Tipo de seguro de interés</label>
+              <select 
+                id="tipoSeguro" 
+                name="tipoSeguro"
+                [(ngModel)]="formData.tipoSeguro"
+              >
+                <option value="">Selecciona una opción</option>
+                <option value="vida">Seguros de Vida</option>
+                <option value="arl">ARL</option>
+                <option value="exequial">Productos Exequiales</option>
+                <option value="accidentes">Accidentes Personales</option>
+                <option value="cumplimiento">Seguros de Cumplimiento</option>
+                <option value="responsabilidad">Responsabilidad Civil</option>
+                <option value="auto">Seguros para Automóviles</option>
+                <option value="hogar">Seguros del Hogar</option>
+                <option value="salud">Seguros de Salud</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje *</label>
+              <textarea 
+                id="mensaje" 
+                name="mensaje"
+                [(ngModel)]="formData.mensaje"
+                required
+                rows="5"
+                placeholder="Cuéntanos cómo podemos ayudarte..."
+              ></textarea>
+            </div>
+
+            <button 
+              type="submit" 
+              class="btn btn-primary btn-submit"
+              [disabled]="!contactForm.valid || formSubmitted"
+            >
+              {{ formSubmitted ? '✓ Mensaje enviado' : 'Enviar mensaje' }}
+            </button>
+
+            <p class="form-note">* Campos obligatorios</p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA O INFORMACIÓN ADICIONAL -->
+  <section class="section section-dark map-section">
+    <div class="map-background"></div>
+    <div class="container">
+      <div class="map-info text-center">
+        <h2>Encuéntranos en Bogotá</h2>
+        <div class="decorative-line"></div>
+        <p class="map-description">
+          Nuestra oficina principal está ubicada en el corazón de Bogotá. 
+          Agenda una cita previa para visitarnos.
+        </p>
+        <div class="map-placeholder">
+          <div class="map-icon">📍</div>
+          <p><strong>Carrera 7 #71-21 Torre B Piso 15</strong></p>
+          <p>Bogotá, Colombia</p>
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=Carrera+7+71-21+Torre+B+Piso+15+Bogotá" 
+            target="_blank" 
+            class="btn btn-secondary"
+          >
+            Ver en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
