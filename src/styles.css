@@ -7,11 +7,11 @@
 /* ===== VARIABLES CSS ===== */
 :root {
   /* Colores Institucionales */
-  --color-primary: #C4933F;        /* Ocre/Dorado oscuro */
-  --color-primary-light: #D4AF37;  /* Dorado claro */
-  --color-primary-dark: #A67C2E;   /* Dorado más oscuro */
-  --color-secondary: #2C5F7C;      /* Azul corporativo suave */
-  --color-secondary-dark: #1a3d52; /* Azul más oscuro */
+  --color-primary: #FDB913;        /* Naranja/Amarillo corporativo */
+  --color-primary-light: #FED049;  /* Amarillo claro */
+  --color-primary-dark: #E5A50F;   /* Naranja más oscuro */
+  --color-secondary: #1E3A8A;      /* Azul oscuro corporativo */
+  --color-secondary-dark: #152a5e; /* Azul más oscuro */
   --color-white: #FFFFFF;
   --color-gray-light: #F8F9FA;
   --color-gray: #E5E7EB;
@@ -179,6 +179,12 @@ a:hover {
   text-decoration: none;
   line-height: 1;
   white-space: nowrap;
+  /* Mejorar touch targets en móviles */
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
 @media (min-width: 768px) {
@@ -219,6 +225,13 @@ a:hover {
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
+}
+
+/* Móviles pequeños */
+@media (max-width: 374px) {
+  .container {
+    padding: 0 0.75rem;
+  }
 }
 
 @media (min-width: 640px) {
@@ -462,9 +475,9 @@ a:hover {
 
 /* ===== BOTONES CON BRILLO ===== */
 .btn-glow {
-  box-shadow: 0 0 20px rgba(196, 147, 63, 0.4);
+  box-shadow: 0 0 20px rgba(253, 185, 19, 0.4);
 }
 
 .btn-glow:hover {
-  box-shadow: 0 0 30px rgba(196, 147, 63, 0.6);
+  box-shadow: 0 0 30px rgba(253, 185, 19, 0.6);
 }

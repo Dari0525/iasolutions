@@ -4,8 +4,8 @@
 
 .whatsapp-button {
   position: fixed;
-  bottom: 2rem;
-  right: 1.5rem;
+  bottom: 1.5rem;
+  right: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -20,6 +20,9 @@
   z-index: 999;
   transition: all var(--transition-normal);
   animation: pulse 2s infinite;
+  /* Prevenir conflictos con gestos táctiles */
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .whatsapp-button:hover {

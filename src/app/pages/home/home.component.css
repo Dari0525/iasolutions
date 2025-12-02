@@ -14,6 +14,74 @@
   width: 100%;
 }
 
+/* ===== CORNER RIBBON ===== */
+.corner-ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  overflow: hidden;
+  width: 250px;
+  height: 250px;
+  pointer-events: none;
+}
+
+.corner-ribbon span {
+  position: absolute;
+  display: block;
+  width: 350px;
+  padding: 16px 0;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  top: 55px;
+  right: -85px;
+  transform: rotate(45deg);
+  border-top: 3px solid var(--color-primary);
+  border-bottom: 3px solid var(--color-primary);
+}
+
+.corner-ribbon span::before,
+.corner-ribbon span::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  z-index: -1;
+  border: 4px solid #0d1117;
+}
+
+.corner-ribbon span::before {
+  left: 0;
+  border-right-width: 18px;
+  border-right-color: transparent;
+}
+
+.corner-ribbon span::after {
+  right: 0;
+  border-left-width: 18px;
+  border-left-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .corner-ribbon {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .corner-ribbon span {
+    width: 250px;
+    padding: 12px 0;
+    font-size: 0.8125rem;
+    top: 42px;
+    right: -62px;
+  }
+}
+
 @media (min-width: 640px) {
   .hero {
     min-height: 500px;
@@ -40,7 +108,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.92) 0%, rgba(22, 33, 62, 0.85) 100%),
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.45) 0%, rgba(22, 33, 62, 0.40) 100%),
               url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80') center/cover;
   z-index: 0;
 }
@@ -158,7 +226,7 @@
   text-align: center;
   box-shadow: var(--shadow-lg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(196, 147, 63, 0.2);
+  border: 1px solid rgba(253, 185, 19, 0.3);
   width: 100%;
 }
 
@@ -220,7 +288,7 @@
   transform: translateX(-50%);
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, rgba(196, 147, 63, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(253, 185, 19, 0.15) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
 }
@@ -259,7 +327,7 @@
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--color-primary);
-  box-shadow: 0 10px 30px rgba(196, 147, 63, 0.3);
+  box-shadow: 0 10px 30px rgba(253, 185, 19, 0.3);
 }
 
 .benefit-icon {
@@ -283,51 +351,140 @@
 /* ===== PRODUCTOS DESTACADOS ===== */
 .featured-products {
   padding: var(--spacing-2xl) 0;
+  background: linear-gradient(to bottom, white 0%, var(--color-gray-light) 100%);
 }
 
-.product-card {
-  text-align: center;
-  padding: var(--spacing-lg);
-  background: white;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  transition: all var(--transition-normal);
-  display: flex;
-  flex-direction: column;
+.products-showcase {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+.products-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
 }
 
-.product-icon {
-  font-size: 3.5rem;
-  margin-bottom: var(--spacing-md);
+@media (min-width: 1024px) {
+  .products-content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+  }
 }
 
-.product-card h4 {
-  color: var(--color-primary);
-  font-size: 1.25rem;
+.products-text h2 {
+  font-size: 2rem;
+  color: var(--color-gray-dark);
   margin-bottom: var(--spacing-sm);
 }
 
-.product-card p {
-  flex-grow: 1;
+@media (min-width: 768px) {
+  .products-text h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.products-text .decorative-line {
+  margin: var(--spacing-md) 0;
+}
+
+.products-intro {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--color-gray-medium);
+  margin-bottom: var(--spacing-lg);
+}
+
+.products-features {
+  margin-bottom: var(--spacing-xl);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
   margin-bottom: var(--spacing-md);
+  font-size: 1rem;
+  color: var(--color-gray-dark);
 }
 
-.product-link {
-  color: var(--color-primary);
-  font-weight: 600;
-  text-decoration: none;
-  transition: all var(--transition-fast);
+.feature-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
-.product-link:hover {
-  color: var(--color-primary-dark);
-  transform: translateX(3px);
-  display: inline-block;
+.btn-large {
+  padding: 1rem 2rem;
+  font-size: 1.0625rem;
+}
+
+.products-visual {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 640px) {
+  .products-visual {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-visual {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visual-card {
+  background: white;
+  padding: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  transition: all var(--transition-normal);
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.visual-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-primary);
+}
+
+.visual-image {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  position: relative;
+}
+
+.visual-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.visual-card:hover .visual-image img {
+  transform: scale(1.1);
+}
+
+.visual-card h4 {
+  color: var(--color-gray-dark);
+  font-size: 1.125rem;
+  margin: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
+  font-weight: 700;
+}
+
+.visual-card p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-gray-medium);
+  margin: 0;
+  padding: 0 var(--spacing-md) var(--spacing-md);
 }
 
 /* ===== CTA SECTION con imagen ===== */
@@ -346,7 +503,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(196, 147, 63, 0.95) 0%, rgba(166, 124, 46, 0.90) 100%),
+  background: linear-gradient(135deg, rgba(253, 185, 19, 0.75) 0%, rgba(229, 165, 15, 0.70) 100%),
               url('https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=1600&q=80') center/cover;
   z-index: 0;
 }

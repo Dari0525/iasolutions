@@ -1,0 +1,165 @@
+/* ============================================
+   POLICY PAGE - POLÍTICA DE DATOS
+   ============================================ */
+
+/* ===== PAGE HEADER ===== */
+.page-header {
+  position: relative;
+  padding: 3rem 0;
+  text-align: center;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    min-height: 400px;
+    padding: var(--spacing-2xl) 0;
+  }
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.50) 0%, rgba(44, 95, 124, 0.45) 100%),
+              url('https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=1600&q=80') center/cover;
+  z-index: 0;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.page-title {
+  color: white;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--spacing-sm);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .page-title {
+    font-size: 2.5rem;
+  }
+}
+
+.decorative-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  margin: var(--spacing-md) auto;
+  border-radius: 2px;
+}
+
+.page-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: var(--spacing-md) auto 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  padding: 0 1rem;
+}
+
+/* ===== CONTENT SECTION ===== */
+.content-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.policy-content h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: var(--color-gray-dark);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  font-weight: 500;
+}
+
+.policy-block {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.policy-block h3 {
+  color: var(--color-gray-dark);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  font-weight: 700;
+}
+
+.policy-block p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--color-gray-medium);
+  margin-bottom: var(--spacing-md);
+}
+
+.policy-block p:last-child {
+  margin-bottom: 0;
+}
+
+.policy-block ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-md) 0 0;
+}
+
+.policy-block ul li {
+  padding: var(--spacing-sm) 0;
+  color: var(--color-gray-medium);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.policy-block ul li strong {
+  color: var(--color-gray-dark);
+  font-weight: 600;
+}
+
+.policy-block a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.policy-block a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .policy-block {
+    padding: var(--spacing-md);
+  }
+
+  .policy-block h3 {
+    font-size: 1.25rem;
+  }
+}

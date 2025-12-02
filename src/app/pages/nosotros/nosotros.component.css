@@ -46,7 +46,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(26, 26, 46, 0.92) 0%, rgba(44, 95, 124, 0.88) 100%),
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.50) 0%, rgba(44, 95, 124, 0.45) 100%),
               url('https://images.unsplash.com/photo-1521791055366-0d553872125f?w=1600&q=80') center/cover;
   z-index: 0;
 }
@@ -148,16 +148,31 @@
   transform: translateY(-5px);
   background: rgba(255, 255, 255, 0.08);
   border-color: var(--color-primary);
-  box-shadow: 0 10px 30px rgba(196, 147, 63, 0.3);
+  box-shadow: 0 10px 30px rgba(253, 185, 19, 0.3);
 }
 
-.mv-icon {
-  font-size: 4rem;
-  margin-bottom: var(--spacing-md);
+.mv-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.mv-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.mission-vision-card:hover .mv-image img {
+  transform: scale(1.05);
 }
 
 .mission-vision-card h3 {
-  color: var(--color-primary);
+  color: var(--color-white);
   font-size: 1.75rem;
   margin-bottom: var(--spacing-md);
 }
@@ -165,7 +180,7 @@
 .mission-vision-card p {
   font-size: 1.0625rem;
   line-height: 1.7;
-  color: var(--color-gray-dark);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
 }
 
@@ -260,7 +275,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(44, 95, 124, 0.92) 0%, rgba(26, 61, 82, 0.90) 100%),
+  background: linear-gradient(135deg, rgba(44, 95, 124, 0.70) 0%, rgba(26, 61, 82, 0.65) 100%),
               url('https://images.unsplash.com/photo-1556740749-887f6717d7e4?w=1600&q=80') center/cover;
   z-index: 0;
 }

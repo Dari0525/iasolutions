@@ -1,6 +1,10 @@
 <div class="home-page">
   <!-- HERO SECTION con imagen de fondo -->
   <section class="hero">
+    <!-- Corner Ribbon -->
+    <div class="corner-ribbon">
+      <span>Énfasis corporativo</span>
+    </div>
     <div class="hero-background"></div>
     <div class="container">
       <div class="hero-content">
@@ -36,30 +40,7 @@
     </div>
   </section>
 
-  <!-- MISIÓN Y VISIÓN -->
-  <section class="section mission-vision">
-    <div class="container">
-      <div class="grid grid-2">
-        <div class="card mission-card">
-          <div class="card-icon">🎯</div>
-          <h3>Nuestra Misión</h3>
-          <p>
-            Ofrecemos soluciones óptimas estructuradas a la medida de nuestros clientes para la 
-            administración de programas de seguros, soportado por nuestro recurso humano y una 
-            estructura sólida y confiable.
-          </p>
-        </div>
-        <div class="card vision-card">
-          <div class="card-icon">🚀</div>
-          <h3>Nuestra Visión</h3>
-          <p>
-            Ser líderes en relación con la calidad del servicio que ofrecemos a nuestros clientes, 
-            soportando sus necesidades y la gestión de riesgos individuales o corporativos.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- BENEFICIOS con fondo oscuro -->
   <section class="section section-dark benefits">
@@ -109,48 +90,60 @@
   <!-- PRODUCTOS DESTACADOS -->
   <section class="section featured-products">
     <div class="container">
-      <div class="section-header text-center">
-        <h2>Nuestros Productos</h2>
-        <p class="section-description">
-          Amplio portafolio de seguros para proteger lo que más te importa
-        </p>
-      </div>
-      <div class="grid grid-3">
-        <div class="product-card">
-          <div class="product-icon">👨‍👩‍👧‍👦</div>
-          <h4>Seguros de Vida</h4>
-          <p>Protección para ti y tu familia, seguros individuales y grupales.</p>
-          <a routerLink="/productos" class="product-link">Ver más →</a>
-        </div>
-        <div class="product-card">
-          <div class="product-icon">🚗</div>
-          <h4>Seguros de Automóviles</h4>
-          <p>SOAT y seguros todo riesgo para tu vehículo.</p>
-          <a routerLink="/productos" class="product-link">Ver más →</a>
-        </div>
-        <div class="product-card">
-          <div class="product-icon">🏠</div>
-          <h4>Seguros del Hogar</h4>
-          <p>Protege tu vivienda y bienes frente a imprevistos.</p>
-          <a routerLink="/productos" class="product-link">Ver más →</a>
-        </div>
-        <div class="product-card">
-          <div class="product-icon">💼</div>
-          <h4>ARL</h4>
-          <p>Protección laboral para empleadores y trabajadores.</p>
-          <a routerLink="/productos" class="product-link">Ver más →</a>
-        </div>
-        <div class="product-card">
-          <div class="product-icon">🏥</div>
-          <h4>Seguros de Salud</h4>
-          <p>Complemento al POS para imprevistos médicos.</p>
-          <a routerLink="/productos" class="product-link">Ver más →</a>
-        </div>
-        <div class="product-card">
-          <div class="product-icon">✅</div>
-          <h4>Más Productos</h4>
-          <p>Exequiales, accidentes, cumplimiento y más.</p>
-          <a routerLink="/productos" class="product-link">Ver más →</a>
+      <div class="products-showcase">
+        <div class="products-content">
+          <div class="products-text">
+            <h2>Nuestros Productos</h2>
+            <div class="decorative-line"></div>
+            <p class="products-intro">
+              Ofrecemos un amplio portafolio de soluciones en seguros, diseñadas para proteger lo que más valoras. 
+              Desde seguros de vida y salud hasta protección para tu hogar, vehículo y negocio.
+            </p>
+            <div class="products-features">
+              <div class="feature-item">
+                <span class="feature-icon">✔️</span>
+                <span>Más de 10 tipos de seguros disponibles</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✔️</span>
+                <span>Cobertura para personas y empresas</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✔️</span>
+                <span>Asesoría personalizada en cada producto</span>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">✔️</span>
+                <span>Planes ajustados a tu presupuesto</span>
+              </div>
+            </div>
+            <a routerLink="/productos" class="btn btn-primary btn-large">
+              Explorar todos los productos
+            </a>
+          </div>
+          <div class="products-visual">
+            <div class="visual-card">
+              <div class="visual-image">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80" alt="Protección Integral">
+              </div>
+              <h4>Protección Integral</h4>
+              <p>Seguros de vida, salud, accidentes y más para tu tranquilidad</p>
+            </div>
+            <div class="visual-card">
+              <div class="visual-image">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Soluciones Corporativas">
+              </div>
+              <h4>Soluciones Corporativas</h4>
+              <p>ARL, cumplimiento, responsabilidad civil y seguros empresariales</p>
+            </div>
+            <div class="visual-card">
+              <div class="visual-image">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Patrimonio Seguro">
+              </div>
+              <h4>Patrimonio Seguro</h4>
+              <p>Protección para tu hogar, vehículos y bienes personales</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -168,7 +161,7 @@
             Contáctanos por WhatsApp
           </a>
           <a routerLink="/contacto" class="btn btn-secondary">
-            Enviar mensaje
+            Enviar mensajeee
           </a>
         </div>
       </div>
