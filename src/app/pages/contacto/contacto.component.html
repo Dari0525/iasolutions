@@ -158,12 +158,12 @@
             <button 
               type="submit" 
               class="btn btn-primary btn-submit"
-              [disabled]="!contactForm.valid || formSubmitted"
+              [disabled]="!contactForm.valid || isSubmitting"
             >
-              {{ formSubmitted ? '✓ Mensaje enviado' : 'Enviar mensaje' }}
+              {{ isSubmitting ? 'Enviando…' : (formSubmitted ? '✓ Mensaje enviado' : 'Enviar mensaje') }}
             </button>
 
-            <p class="form-note">* Campos obligatorios</p>
+            <p class="form-note" aria-live="polite">* Campos obligatorios</p>
           </form>
         </div>
 

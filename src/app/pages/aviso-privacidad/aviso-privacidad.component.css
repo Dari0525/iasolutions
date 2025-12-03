@@ -106,17 +106,20 @@
 }
 
 .policy-block h3 {
-  color: var(--color-gray-dark);
-  font-size: 1.5rem;
+  color: var(--color-primary);
+  font-size: 1.25rem;
   margin-bottom: var(--spacing-md);
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .policy-block p {
   font-size: 1rem;
   line-height: 1.8;
-  color: var(--color-gray-medium);
+  color: var(--color-gray-dark);
   margin-bottom: var(--spacing-md);
+  text-align: justify;
 }
 
 .policy-block p:last-child {
@@ -124,16 +127,17 @@
 }
 
 .policy-block ul {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: var(--spacing-lg);
   margin: var(--spacing-md) 0 0;
 }
 
 .policy-block ul li {
-  padding: var(--spacing-sm) 0;
-  color: var(--color-gray-medium);
+  padding: var(--spacing-xs) 0;
+  color: var(--color-gray-dark);
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
+  text-align: justify;
 }
 
 .policy-block ul li strong {
