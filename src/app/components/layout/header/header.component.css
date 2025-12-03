@@ -93,11 +93,13 @@
   height: 100vh;
   background-color: var(--color-white);
   list-style: none;
-  padding: 5rem 2rem 2rem;
+  /* Extra top padding so menu items start below the logo on mobile */
+  padding: 7rem 1.5rem 2rem;
   box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
   transition: right var(--transition-normal);
   overflow-y: auto;
   z-index: 1000;
+  border-left: 3px solid #b3862b;
 }
 
 .navbar-menu.active {
@@ -159,6 +161,12 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
+}
+
+/* Dim the logo slightly when menu is open to avoid visual overlap */
+.menu-open .navbar-brand {
+  opacity: 0.0;
+  pointer-events: none;
 }
 
 /* ===== TABLET - 768px ===== */

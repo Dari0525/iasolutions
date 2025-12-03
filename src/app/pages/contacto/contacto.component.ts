@@ -57,6 +57,9 @@ export class ContactoComponent {
     .then(() => {
       // Éxito: mantener feedback de enviado
       this.formSubmitted = true;
+      try {
+        alert('Mensaje enviado con éxito. ¡Gracias por contactarnos!');
+      } catch (_) {}
     })
     .catch((err) => {
       console.error('Error enviando correo:', err);

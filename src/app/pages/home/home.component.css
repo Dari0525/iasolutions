@@ -34,12 +34,12 @@
   background: linear-gradient(135deg, #16213e 0%, #1a1a2e 100%);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
   color: white;
-  font-size: 0.5625rem;
+  font-size: 0.5rem; /* slightly smaller on mobile to avoid overlapping header */
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  top: 26px;
+  top: 34px; /* lower the ribbon a bit on mobile */
   right: -44px;
   transform: rotate(45deg);
   border-top: 1.5px solid var(--color-primary);
